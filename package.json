@@ -13,6 +13,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "@justa/prettier-rules": "^0.1.0",
     "prettier": "^2.5.1",
     "turbo": "latest"
   },
@@ -38,5 +39,6 @@
   "engines": {
     "npm": ">=7.0.0",
     "node": ">=14.0.0"
-  }
+  },
+  "prettier": "@justa/prettier-rules"
 }
