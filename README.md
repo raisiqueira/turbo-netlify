@@ -29,12 +29,31 @@ This turborepo has some additional tools already setup for you:
 
 This repository is used in the `npx create-turbo` command, and selected when choosing which package manager you wish to use with your monorepo (Yarn).
 
+### Setup on Netlify (monorepo)
+
+Setup each app using Netlify CLI (`netlify init` into app folder) or Netlify UI pointing to the same repository.
+
+In this example, I configured two apps (using NextJS).
+
+![Netlify dashboard with two apps](https://user-images.githubusercontent.com/2914170/147697084-e8790007-fb5e-47b1-a0d9-124b02829af3.png)
+
+After configuring each app, you can enable multiple commit notifications in Netlify UI.
+
+`Team settings > Sites > Notifications > Commit status notifications`.
+
+So, when you open a pull request, you'll get a notification in your app.
+
+![Netlify multiple notification](https://user-images.githubusercontent.com/2914170/147697244-4a84cb92-e4dd-4570-a37f-59ef3020bbe6.png)
+
+#### Next steps :construction:
+
+Use the same cache for all apps.
+
 ### Build
 
 To build all apps and packages, run the following command:
 
 ```
-cd my-turborepo
 yarn run build
 ```
 
@@ -43,7 +62,6 @@ yarn run build
 To develop all apps and packages, run the following command:
 
 ```
-cd my-turborepo
 yarn run dev
 ```
 
@@ -54,7 +72,6 @@ Turborepo can use a technique known as [Remote Caching (Beta)](https://turborepo
 By default, Turborepo will cache locally. To enable Remote Caching (Beta) you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
 
 ```
-cd my-turborepo
 npx turbo login
 ```
 
